@@ -1,1 +1,32 @@
-<p>calculo works!</p>
+<form action = "">
+    <h1 id="titulo">Consumo de Energia</h1>
+
+    
+    <label for="pessoas">Quantas pessoas moram na casa?<input id="pessoas" [(ngModel)]="pessoas" type="number" class="form-control"  name="pessoas"></label><br>
+
+    <label for="comodos">Quantos cômodos tem na casa?<input id="comodos" [(ngModel)]="comodos" type="number" class="form-control"  name="comodos"></label><br>
+
+    <label>Marque se tem em casa:</label><br>
+    <input type="checkbox" id="maqroupa" name="maqroupa" [(ngModel)]="maqroupa">
+    <label for="maqroupa">Máquina de lavar roupa</label><br>
+    <input type="checkbox" id="secroupa" name="secroupa" [(ngModel)]="secroupa" >
+    <label for="secroupa"> Secadora de roupas</label><br>
+
+    <label for="tv">Quantos aparelhos de TV?<input id="tv" [(ngModel)]="tv" type="number" class="form-control"  name="tv"></label><br>
+
+    <label for="comp">Quantos computadores?<input id="comp" type="number" [(ngModel)]="comp" class="form-control"  name="comp"></label><br>
+    
+    <label for="energia">Tárifa energética:<input id="energia" [(ngModel)]="energia" type="number" class="form-control"  name="energia"></label><br>
+    
+
+    
+    <button class="btns" id="btn" class="btn btn-outline-light"  (click)="calculo()"> Calcule</button><br>
+
+    
+    <label for="kwh">Kwh</label><input type="number" id="kwh" class="form-control" [(ngModel)]="kwh"  name="kwh" readonly>
+
+    <label for="resp">R$</label><input type="number" id="resp" class="form-control" [(ngModel)]="resp"  name="resp" readonly>
+    
+
+
+</form>
