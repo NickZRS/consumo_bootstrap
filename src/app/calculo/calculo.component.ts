@@ -22,6 +22,8 @@ export class CalculoComponent {
   energia:number = 0;
   kwh: number =0;
   resp: number = 0;
+  preco: string ="";
+  consumo: string ="";
 
   calculo(){
 
@@ -38,6 +40,8 @@ export class CalculoComponent {
 
     this.kwh = this.gstbanho + this.gsttv + this.gstcomp + this.gstmaq + this.gstsec;
     this.resp = this.kwh * this.energia;
+    this.consumo = this.kwh + "Kwh";
+    this.preco = "R$" + this.resp.toFixed(2);
 
   }
 
